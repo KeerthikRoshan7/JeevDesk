@@ -21,10 +21,7 @@
 
 ## ✦ Logo Mark
 
-<div align="center"> <img src="./assets/jeevdesk_transparent_logo.png" alt="JEEVDESK AI-driven livelihood and skilling logo" width="560" />
-
-
-**JEEVDESK brand mark — AI network, lotus growth, and livelihood pathways**
+<div align="center">
 
 <pre align="center">
 
