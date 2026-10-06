@@ -87,7 +87,7 @@ d:\PROJECTS\SIH2026\jeevdesk\
 
 1. **Launch Server:**
    ```powershell
-   python d:\PROJECTS\SIH2026\jeevdesk\run_server.py
+   python run_server.py
    ```
 2. **Access Web Application:**
    Open your web browser at:
