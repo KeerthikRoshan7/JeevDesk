@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEEVDESK | AI-Driven Voice Assistant for PM-AJAY Livelihood & NSQF Skilling</title>
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Neelam (Sapphire / Royal Blue) Theme Custom Palette */
+    :root {
+      --neelam-950: #0a1128;
+      --neelam-900: #001f54;
+      --neelam-800: #034078;
+      --neelam-700: #1282a2;
+      --neelam-600: #006699;
+      --neelam-500: #0077b6;
+      --neelam-400: #0096c7;
+      --neelam-300: #48cae4;
+      --neelam-100: #e0f2fe;
+      --neelam-50: #f0f7ff;
+      --saffron-gold: #f59e0b;
+      --saffron-accent: #d97706;
+    }
+
+    .bg-neelam-950 { background-color: #0a1128; }
+    .bg-neelam-900 { background-color: #001f54; }
+    .bg-neelam-850 { background-color: #052659; }
+    .bg-neelam-800 { background-color: #034078; }
+    .bg-neelam-700 { background-color: #1282a2; }
+    .bg-neelam-50 { background-color: #f0f7ff; }
+    .text-neelam-900 { color: #001f54; }
+    .text-neelam-800 { color: #034078; }
+    .text-neelam-700 { color: #1282a2; }
+    .text-neelam-500 { color: #0077b6; }
+    .border-neelam-700 { border-color: #1282a2; }
+    .border-neelam-800 { border-color: #034078; }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 119, 182, 0.75); }
+      70% { transform: scale(1.06); box-shadow: 0 0 0 16px rgba(0, 119, 182, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 119, 182, 0); }
+    }
+    .mic-active {
+      animation: pulse-ring 2s infinite;
+      background-color: #dc2626 !important;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 4px;
+    }
+
+    /* Hide scrollbar for clean horizontal nav tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Top Government Authority Banner (Neelam Blue with Gold Saffron Accent) -->
+  <header class="bg-gradient-to-r from-[#001438] via-[#001f54] to-[#034078] text-white shadow-md border-b-2 sm:border-b-4 border-amber-500 shrink-0">
+    <div class="max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 py-1.5 sm:py-2 flex flex-wrap items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand & Official Logo -->
+      <div class="flex items-center space-x-2.5 sm:space-x-3.5">
+        <div class="bg-white p-1 rounded-xl sm:rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center overflow-hidden w-11 h-11 sm:w-13 sm:h-13 aspect-square shrink-0">
+          <img src="/static/assets/jeevdesk_emblem_1x1.png" alt="JEEVDESK Official Emblem" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <div class="flex items-center space-x-1.5 sm:space-x-2">
+            <span class="text-[8.5px] sm:text-[9.5px] uppercase tracking-wider font-extrabold bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded shadow-xs">
+              PM-AJAY Grant-in-Aid
+            </span>
+            <span class="text-[10px] sm:text-xs text-sky-200 font-medium">Department of Social Justice & Empowerment (MoSJE)</span>
+          </div>
+          <h1 class="text-base sm:text-xl font-black tracking-tight text-white flex items-center gap-1.5">
+            JEEVDESK <span class="text-xs font-normal text-sky-200">| ஜீவ்டெஸ்க்</span>
+          </h1>
+          <p class="text-[9.5px] sm:text-[11px] text-sky-100 hidden md:block">AI-Driven Multilingual Voice Assistant for Livelihood Mapping & NSQF-Aligned Skilling Recommendations</p>
+        </div>
+      </div>
+
+      <!-- Language Switcher & Staff Access -->
+      <div class="flex items-center space-x-2 sm:space-x-3 ml-auto sm:ml-0">
+        <div class="flex items-center bg-[#001233]/70 rounded-lg p-0.5 sm:p-1 border border-sky-600/30 text-xs">
+          <span class="px-1.5 sm:px-2 text-sky-200 font-medium flex items-center gap-1 text-[11px] sm:text-xs">
+            <i data-lucide="languages" class="w-3 sm:w-3.5 h-3 sm:h-3.5 text-sky-300"></i> <span class="hidden sm:inline">மொழி /</span> Lang:
+          </span>
+          <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-[#002855] text-white font-semibold rounded-md px-1.5 sm:px-2 py-0.5 sm:py-1 text-[11px] sm:text-xs outline-none cursor-pointer border border-sky-500/40">
+            <option value="ta" selected>தமிழ் (Tamil)</option>
+            <option value="en">English (India)</option>
+            <option value="hi">हिंदी (Hindi)</option>
+          </select>
+        </div>
+
+        <button onclick="switchTab('dashboard')" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-[11px] sm:text-xs px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl shadow-sm transition flex items-center gap-1.5 transform active:scale-95 whitespace-nowrap">
+          <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-slate-900"></i> <span>Staff Portal</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs (Neelam Themed) -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-2xs shrink-0">
+    <div class="max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between overflow-x-auto no-scrollbar gap-1 sm:gap-4 text-xs font-semibold">
+      <button onclick="switchTab('voice-assistant')" id="tab-btn-voice-assistant" class="py-2.5 px-2.5 sm:px-3 text-[#001f54] border-b-2 border-[#001f54] flex items-center gap-1.5 transition whitespace-nowrap shrink-0">
+        <i data-lucide="mic" class="w-3.5 h-3.5 text-[#001f54]"></i> <span>Voice Interview (குரல் வழிகாட்டி)</span>
+      </button>
+      <button onclick="switchTab('recommendations')" id="tab-btn-recommendations" class="py-2.5 px-2.5 sm:px-3 text-slate-600 hover:text-[#001f54] border-b-2 border-transparent flex items-center gap-1.5 transition whitespace-nowrap shrink-0">
+        <i data-lucide="award" class="w-3.5 h-3.5"></i> <span>Recommendations</span>
+      </button>
+      <button onclick="switchTab('case-referrals')" id="tab-btn-case-referrals" class="py-2.5 px-2.5 sm:px-3 text-slate-600 hover:text-[#001f54] border-b-2 border-transparent flex items-center gap-1.5 transition whitespace-nowrap shrink-0">
+        <i data-lucide="git-pull-request" class="w-3.5 h-3.5"></i> <span>Case Management & Referrals</span>
+      </button>
+      <button onclick="switchTab('catalog')" id="tab-btn-catalog" class="py-2.5 px-2.5 sm:px-3 text-slate-600 hover:text-[#001f54] border-b-2 border-transparent flex items-center gap-1.5 transition whitespace-nowrap shrink-0">
+        <i data-lucide="book-open" class="w-3.5 h-3.5"></i> <span>Approved NSQF Catalog</span>
+      </button>
+      <button onclick="switchTab('dashboard')" id="tab-btn-dashboard" class="py-2.5 px-2.5 sm:px-3 text-slate-600 hover:text-[#001f54] border-b-2 border-transparent flex items-center gap-1.5 transition whitespace-nowrap shrink-0">
+        <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i> <span>M&E Analytics</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Workspace (Always scrolls naturally for other pages) -->
+  <main id="mainContainer" class="max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 py-3.5 sm:py-5 flex-1 w-full overflow-y-auto">
+
+    <!-- ================= TAB 1: VOICE INTERVIEW ================= -->
+    <section id="view-voice-assistant" class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 items-stretch min-h-0 lg:h-[calc(100vh-130px)]">
+      
+      <!-- Left Column: Voice Conversation Console -->
+      <div class="lg:col-span-7 xl:col-span-7 2xl:col-span-8 bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[520px] lg:h-full min-h-0">
+        <!-- Neelam Voice Top Bar -->
+        <div class="px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gradient-to-r from-[#001438] to-[#002855] text-white flex items-center justify-between shrink-0">
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-sky-500"></span>
+            </span>
+            <div>
+              <h2 class="text-xs sm:text-sm font-bold flex items-center gap-1.5 sm:gap-2">
+                <span>JEEVDESK Voice Agent</span>
+                <span class="text-[9px] font-bold text-sky-200 bg-sky-950 px-1.5 py-0.5 rounded border border-sky-800">Voice-First Active</span>
+              </h2>
+              <p class="text-[10px] text-sky-200/70" id="sessionLabel">Session ID: Initializing...</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-1.5 sm:space-x-2">
+            <button onclick="requestHumanEscalation()" title="Escalate to Human Field Facilitator" class="bg-red-950/70 hover:bg-red-900 border border-red-700/80 text-red-200 text-[10px] sm:text-xs px-2 py-1 rounded-lg flex items-center gap-1 transition">
+              <i data-lucide="phone-forwarded" class="w-3 h-3"></i> <span class="hidden sm:inline">மனித உதவி /</span> Officer
+            </button>
+            <button onclick="restartSession()" title="Restart Voice Interview" class="bg-[#001940] hover:bg-[#00235b] text-sky-200 border border-sky-700/40 text-[10px] sm:text-xs px-2 py-1 rounded-lg flex items-center gap-1 transition">
+              <i data-lucide="rotate-ccw" class="w-3 h-3"></i> Restart
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat History Messages Flow -->
+        <div id="chatContainer" class="flex-1 p-3 sm:p-4 overflow-y-auto space-y-3 custom-scrollbar bg-slate-50/70 min-h-0">
+          <!-- Dynamic voice utterances append here -->
+        </div>
+
+        <!-- Voice & Text Input Controls -->
+        <div class="p-2.5 sm:p-3 bg-white border-t border-slate-200 shrink-0">
+          <div class="flex items-center justify-between mb-2 text-[10.5px] sm:text-xs text-slate-500">
+            <span class="flex items-center gap-1 text-[#001f54] font-medium">
+              <i data-lucide="volume-2" class="w-3 h-3 text-[#0077b6]"></i> Multilingual Speech Synthesis Active
+            </span>
+            <span class="text-[#034078] font-bold" id="currentStageIndicator">Stage: GREETING</span>
+          </div>
+
+          <!-- Quick Speech Suggestion Buttons (Assisted Mode) -->
+          <div id="quickResponsesContainer" class="flex flex-wrap gap-1.5 mb-2">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Mic Button & Utterance Input -->
+          <div class="flex items-center space-x-2">
+            <button id="micBtn" onclick="toggleMic()" class="bg-[#001f54] hover:bg-[#034078] text-white rounded-xl p-2.5 sm:p-3 flex items-center justify-center shadow-sm transition transform active:scale-95 border border-[#002855] shrink-0">
+              <i data-lucide="mic" id="micIcon" class="w-5 h-5"></i>
+            </button>
+            <input type="text" id="textInput" placeholder="Speak through microphone or type your response..." 
+                   onkeydown="if(event.key==='Enter') sendUserUtterance()"
+                   class="flex-1 bg-slate-100 border border-slate-300 rounded-xl px-3 py-2 sm:py-2.5 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0077b6] text-slate-800 placeholder-slate-400">
+            <button onclick="sendUserUtterance()" class="bg-[#001f54] hover:bg-[#034078] text-white rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold flex items-center gap-1 transition shadow-sm shrink-0">
+              <span>Send</span>
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Extracted Profile & Human Facilitator Controls -->
+      <div class="lg:col-span-5 xl:col-span-5 2xl:col-span-4 flex flex-col justify-between gap-3 lg:h-full min-h-0">
+        
+        <!-- Live Beneficiary Profile Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-3.5 sm:p-4 flex-1 flex flex-col justify-between min-h-0">
+          <div>
+            <div class="flex items-center justify-between mb-2.5 pb-2 border-b border-slate-100">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="user-check" class="w-4 h-4 text-[#001f54]"></i>
+                <h3 class="font-bold text-[#001f54] text-xs sm:text-sm">Extracted Profile (Section 7.2)</h3>
+              </div>
+              <span id="consentBadge" class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold">Consented</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">Beneficiary Name</span>
+                <span id="cardName" class="font-bold text-slate-800 text-xs sm:text-sm">-</span>
+              </div>
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">District & State</span>
+                <span id="cardDistrict" class="font-bold text-slate-800 text-xs sm:text-sm">-</span>
+              </div>
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">Current Livelihood</span>
+                <span id="cardOccupation" class="font-bold text-slate-800 text-xs sm:text-sm">-</span>
+              </div>
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">Educational Standard</span>
+                <span id="cardEducation" class="font-bold text-slate-800 text-xs sm:text-sm">-</span>
+              </div>
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100 col-span-2">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">Practical Skills & Tools</span>
+                <span id="cardSkills" class="font-bold text-slate-800 text-xs sm:text-sm truncate block">-</span>
+              </div>
+              <div class="bg-slate-50 p-2 sm:p-2.5 rounded-xl border border-slate-100 col-span-2">
+                <span class="text-slate-400 block font-medium text-[9.5px] sm:text-[10.5px]">Employment Preference</span>
+                <span id="cardPreference" class="font-bold text-[#034078] text-xs sm:text-sm">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Button: Finalize Profile -->
+          <button id="btnComputeRecs" onclick="finalizeVoiceProfile()" class="w-full bg-gradient-to-r from-[#001f54] to-[#0077b6] hover:from-[#001438] hover:to-[#034078] text-white font-bold py-2.5 px-3 rounded-xl shadow-md transition flex items-center justify-center gap-1.5 text-xs sm:text-sm shrink-0">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Match NSQF Qualifications & Grants
+          </button>
+        </div>
+
+        <!-- Program Advisory & Governance Disclaimer -->
+        <div class="bg-sky-50/70 border border-sky-200 rounded-2xl p-2.5 sm:p-3 text-xs text-sky-950 space-y-1 shrink-0">
+          <div class="flex items-center gap-1.5 font-bold text-[#001f54] text-xs">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-[#0077b6]"></i> PM-AJAY Grant-in-Aid Advisory Notice
+          </div>
+          <p class="leading-relaxed text-slate-700 text-[10.5px] sm:text-[11px]">
+            Recommendations are advisory and explainable. AI output does not guarantee admission or grant disbursement. Referrals undergo human field verification.
+          </p>
+          <div class="pt-1.5 border-t border-sky-200/60 flex items-center justify-between text-[9.5px] sm:text-[10.5px] text-[#034078] font-medium">
+            <span>Data Minimization: Active</span>
+            <span>Version: 2026.Q3</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 2: RECOMMENDATIONS & EXPLAINABILITY ================= -->
+    <section id="view-recommendations" class="hidden space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <div>
+          <span class="text-xs uppercase font-extrabold text-[#001f54] tracking-wider bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-200">NSQF Matching Engine</span>
+          <h2 class="text-xl font-bold text-slate-900 mt-1">Top NSQF-Aligned Qualifications & Livelihood Pathways</h2>
+          <p class="text-xs text-slate-500">Calculated using 5-factor weighted scoring: Skills Affinity (35%), Pathway Fit (20%), Geography (20%), Prerequisites (15%), Demand Linkage (10%).</p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button onclick="loadSampleBeneficiary('BEN-TN-2026-001')" class="text-xs font-semibold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition">Sample: Selvakumar (Salem)</button>
+          <button onclick="loadSampleBeneficiary('BEN-TN-2026-002')" class="text-xs font-semibold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition">Sample: Priya (Madurai)</button>
+        </div>
+      </div>
+
+      <!-- Recommendation Cards Grid -->
+      <div id="recommendationsGrid" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: CASE MANAGEMENT & REFERRALS ================= -->
+    <section id="view-case-referrals" class="hidden space-y-4 sm:space-y-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="p-4 sm:p-5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 sm:gap-4 bg-slate-50/50">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-[#001f54]">Case Management & Referral Tracking (Section 7.4)</h2>
+            <p class="text-[11px] sm:text-xs text-slate-500">Track beneficiary referral progression across training hubs, enrollment, attendance, and wage/enterprise placement.</p>
+          </div>
+          <button onclick="fetchReferrals()" class="text-xs bg-[#001f54] hover:bg-[#034078] text-white font-semibold px-3 py-2 rounded-lg flex items-center gap-1.5 transition shadow-sm">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Refresh Cases
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-600">
+            <thead class="bg-slate-50 text-slate-900 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5 whitespace-nowrap">Referral ID</th>
+                <th class="p-3.5 whitespace-nowrap">Beneficiary Details</th>
+                <th class="p-3.5">Selected NSQF Course</th>
+                <th class="p-3.5">Training Center / Partner</th>
+                <th class="p-3.5 whitespace-nowrap">District</th>
+                <th class="p-3.5 whitespace-nowrap min-w-[140px]">Status</th>
+                <th class="p-3.5 whitespace-nowrap text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="referralsTableBody" class="divide-y divide-slate-100">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: NSQF & PM-AJAY CATALOG ================= -->
+    <section id="view-catalog" class="hidden space-y-4 sm:space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3 sm:gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <div>
+          <h2 class="text-base sm:text-lg font-bold text-[#001f54]">Approved NSQF Qualification & Opportunity Catalog (Section 7.3)</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Curated NSQF courses, Krishi Vigyan Kendras, Sector Skill Councils, and local enterprise linkages with PM-AJAY Grant-in-Aid support.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold bg-sky-100 text-[#001f54] px-3 py-1 rounded-full border border-sky-200">Catalog Version: 2026.Q3-PMAJAY-GIA</span>
+        </div>
+      </div>
+
+      <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Injected via JS -->
+      </div>
+    </section>
+
+    <!-- ================= TAB 5: M&E ANALYTICS DASHBOARD ================= -->
+    <section id="view-dashboard" class="hidden space-y-4 sm:space-y-6">
+      
+      <!-- Key Metric Cards (Neelam Styled) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-[#001f54]">
+          <span class="text-xs text-slate-500 font-medium">Beneficiaries Profiled</span>
+          <h3 id="statTotalProfiles" class="text-2xl font-black text-[#001f54] mt-1">0</h3>
+          <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1 mt-1"><i data-lucide="check" class="w-3 h-3"></i> Consented Intake</span>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-[#0077b6]">
+          <span class="text-xs text-slate-500 font-medium">Referrals Generated</span>
+          <h3 id="statTotalReferrals" class="text-2xl font-black text-[#0077b6] mt-1">0</h3>
+          <span class="text-[11px] text-slate-500 mt-1 block">To verified training hubs</span>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-emerald-600">
+          <span class="text-xs text-slate-500 font-medium">Enrolled / In Training</span>
+          <h3 id="statEnrolled" class="text-2xl font-black text-emerald-600 mt-1">0</h3>
+          <span class="text-[11px] text-slate-500 mt-1 block">PM-AJAY Stipend Active</span>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-amber-500">
+          <span class="text-xs text-slate-500 font-medium">Human Escalations</span>
+          <h3 id="statEscalations" class="text-2xl font-black text-amber-600 mt-1">0</h3>
+          <span class="text-[11px] text-slate-500 mt-1 block">Field Worker Queue</span>
+        </div>
+      </div>
+
+      <!-- Funnel & District Distribution Breakdown -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-bold text-sm text-[#001f54] mb-3 flex items-center gap-2">
+            <i data-lucide="filter" class="w-4 h-4 text-[#0077b6]"></i> Livelihood Pipeline Conversion Funnel
+          </h3>
+          <div id="funnelContainer" class="space-y-3 text-xs">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-bold text-sm text-[#001f54] mb-3 flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-[#034078]"></i> Geographic Coverage across Pilot Districts
+          </h3>
+          <div id="districtDistributionContainer" class="space-y-3 text-xs">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Audit Logs Table (Section 10.3) -->
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+        <h3 class="font-bold text-sm text-[#001f54] mb-3 flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-slate-700"></i> Governance & Audit Logs (Section 10)
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-600">
+            <thead class="bg-slate-50 font-bold border-b border-slate-200 text-slate-900 uppercase text-[10px]">
+              <tr>
+                <th class="p-2.5">Timestamp</th>
+                <th class="p-2.5">Actor</th>
+                <th class="p-2.5">Action</th>
+                <th class="p-2.5">Entity</th>
+                <th class="p-2.5">Audit Detail</th>
+              </tr>
+            </thead>
+            <tbody id="auditLogsTableBody" class="divide-y divide-slate-100">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Referral Modal -->
+  <div id="referralModal" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="font-bold text-[#001f54] text-base flex items-center gap-2">
+          <i data-lucide="send" class="w-4 h-4 text-[#0077b6]"></i> Confirm Beneficiary Referral
+        </h3>
+        <button onclick="closeReferralModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="text-xs space-y-2 text-slate-600">
+        <p><strong>Beneficiary:</strong> <span id="modalBeneficiaryName">-</span></p>
+        <p><strong>Course:</strong> <span id="modalCourseTitle" class="text-[#001f54] font-semibold">-</span></p>
+        <p><strong>Center / Partner:</strong> <span id="modalCenterName">-</span></p>
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Counselor / Facilitator Notes:</label>
+          <textarea id="modalNotes" rows="3" class="w-full border border-slate-300 rounded-lg p-2 text-xs focus:ring-2 focus:ring-[#0077b6] outline-none" placeholder="Enter verification notes, travel arrangement, or stipend details..."></textarea>
+        </div>
+      </div>
+      <div class="flex justify-end space-x-2 pt-2">
+        <button onclick="closeReferralModal()" class="px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg">Cancel</button>
+        <button onclick="submitReferral()" class="px-4 py-2 text-xs font-bold bg-[#001f54] hover:bg-[#034078] text-white rounded-lg shadow">Confirm & Submit Referral</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Update Modal -->
+  <div id="statusModal" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <h3 class="font-bold text-[#001f54] text-sm">Update Case Status</h3>
+        <button onclick="closeStatusModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">New Workflow Status:</label>
+          <select id="modalStatusSelect" class="w-full border border-slate-300 rounded-lg p-2 font-medium">
+            <option value="Referred">Referred</option>
+            <option value="Contact Attempted">Contact Attempted</option>
+            <option value="Enrolled">Enrolled</option>
+            <option value="In Training">In Training</option>
+            <option value="Completed">Completed</option>
+            <option value="Placed/Started Enterprise">Placed / Started Enterprise</option>
+            <option value="Declined">Declined</option>
+            <option value="Closed">Closed</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Progress Note / Outcome Evidence:</label>
+          <input type="text" id="modalStatusNote" class="w-full border border-slate-300 rounded-lg p-2 text-xs" placeholder="e.g. Attending batch 3, daily stipend credited">
+        </div>
+      </div>
+      <div class="flex justify-end space-x-2 pt-2">
+        <button onclick="closeStatusModal()" class="px-3 py-2 text-xs text-slate-600 hover:bg-slate-100 rounded-lg">Cancel</button>
+        <button onclick="submitStatusUpdate()" class="px-4 py-2 text-xs font-bold bg-[#001f54] hover:bg-[#034078] text-white rounded-lg">Save Status</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State management
+    let currentSessionId = null;
+    let currentStage = 'greeting';
+    let currentLanguage = 'ta';
+    let activeProfile = null;
+    let selectedReferralId = null;
+    let pendingReferralData = null;
+    let isRecording = false;
+    let recognition = null;
+
+    // Quick prompt responses for assisted mode & testing
+    const QUICK_PROMPTS = {
+      'greeting': [
+        { label: 'தமிழ் (Tamil)', text: 'தமிழ்' },
+        { label: 'English', text: 'English' },
+        { label: 'हिंदी (Hindi)', text: 'हिंदी' }
+      ],
+      'consent': [
+        { label: 'ஆம், தொடரலாம் (Yes, proceed)', text: 'ஆம் சரி தொடரலாம்' },
+        { label: 'Yes, I agree', text: 'Yes, I agree' }
+      ],
+      'name': [
+        { label: 'என் பெயர் செல்வாகுமார்', text: 'என் பெயர் செல்வாகுமார்' },
+        { label: 'என் பெயர் பிரியா', text: 'என் பெயர் பிரியா' }
+      ],
+      'district': [
+        { label: 'சேலம் (Salem)', text: 'சேலம்' },
+        { label: 'மதுரை (Madurai)', text: 'மதுரை' },
+        { label: 'திருப்பூர் (Tirupur)', text: 'திருப்பூர்' }
+      ],
+      'current_work': [
+        { label: 'விவசாயக் கூலி & பம்ப் வேலை', text: 'விவசாயக் கூலி மற்றும் பம்ப் வேலை' },
+        { label: 'தையல் வேலை', text: 'தையல் வேலை' },
+        { label: 'எலக்ட்ரிக்கல் உதவியாளர்', text: 'எலக்ட்ரிக்கல் உதவியாளர்' }
+      ],
+      'education': [
+        { label: '8-ஆம் வகுப்பு (8th standard)', text: '8-ஆம் வகுப்பு' },
+        { label: '10-ஆம் வகுப்பு (10th pass)', text: '10-ஆம் வகுப்பு' },
+        { label: '5-ஆம் வகுப்பு (5th standard)', text: '5-ஆம் வகுப்பு' }
+      ],
+      'skills': [
+        { label: 'பம்ப் இயக்கம், சொட்டு நீர் பராமரிப்பு', text: 'பம்ப் இயக்கம், சொட்டு நீர் பராமரிப்பு' },
+        { label: 'தையல் இயந்திரம், வெட்டுதல்', text: 'தையல் இயந்திரம், வெட்டுதல்' },
+        { label: 'காளான் வளர்ப்பு, பாக்கெட்டிங்', text: 'காளான் வளர்ப்பு, பாக்கெட்டிங்' }
+      ],
+      'work_preference': [
+        { label: 'மாத ஊதிய வேலை (Wage Employment)', text: 'மாத ஊதிய வேலை' },
+        { label: 'சொந்த சுயதொழில் (Self-Employment)', text: 'சொந்த சுயதொழில்' }
+      ]
+    };
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', async () => {
+      lucide.createIcons();
+      switchTab('voice-assistant');
+      await initVoiceSession();
+      await fetchCatalog();
+      await fetchReferrals();
+      await fetchDashboardMetrics();
+      initSpeechRecognition();
+    });
+
+    // Navigation Switcher
+    function switchTab(tabName) {
+      const tabs = ['voice-assistant', 'recommendations', 'case-referrals', 'catalog', 'dashboard'];
+      const body = document.body;
+      const main = document.getElementById('mainContainer');
+
+      if (tabName === 'voice-assistant') {
+        body.classList.add('lg:h-screen', 'lg:overflow-hidden');
+        if (main) main.classList.remove('overflow-y-auto');
+      } else {
+        body.classList.remove('lg:h-screen', 'lg:overflow-hidden');
+        if (main) main.classList.add('overflow-y-auto');
+      }
+
+      tabs.forEach(t => {
+        const view = document.getElementById(`view-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          view.classList.remove('hidden');
+          btn.classList.add('text-[#001f54]', 'border-[#001f54]');
+          btn.classList.remove('text-slate-600', 'border-transparent');
+        } else {
+          view.classList.add('hidden');
+          btn.classList.remove('text-[#001f54]', 'border-[#001f54]');
+          btn.classList.add('text-slate-600', 'border-transparent');
+        }
+      });
+      lucide.createIcons();
+    }
+
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      initVoiceSession();
+    }
+
+    // Voice Session Management
+    async function initVoiceSession() {
+      try {
+        const res = await fetch(`/api/voice/start-session?language=${currentLanguage}`);
+        const data = await res.json();
+        currentSessionId = data.session_id;
+        currentStage = data.stage;
+        document.getElementById('sessionLabel').innerText = `Session ID: ${data.session_id}`;
+        
+        // Reset chat container
+        const chat = document.getElementById('chatContainer');
+        chat.innerHTML = '';
+
+        if (data.conversation_history && data.conversation_history.length > 0) {
+          data.conversation_history.forEach(turn => {
+            appendMessage(turn.speaker, turn.transcript);
+          });
+          speakText(data.conversation_history[0].transcript);
+        }
+
+        updateQuickResponses(currentStage);
+        updateProfileUI(data.profile_draft);
+      } catch (err) {
+        console.error("Failed to start voice session:", err);
+      }
+    }
+
+    function restartSession() {
+      initVoiceSession();
+    }
+
+    async function sendUserUtterance(overrideText = null) {
+      const input = document.getElementById('textInput');
+      const text = overrideText || input.value.trim();
+      if (!text) return;
+      if (!overrideText) input.value = '';
+
+      appendMessage('beneficiary', text);
+
+      try {
+        const res = await fetch('/api/voice/turn', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            session_id: currentSessionId,
+            utterance: text
+          })
+        });
+        const data = await res.json();
+        currentStage = data.stage;
+        document.getElementById('currentStageIndicator').innerText = `Stage: ${currentStage.toUpperCase()}`;
+
+        appendMessage('system', data.system_reply);
+        speakText(data.system_reply);
+
+        if (data.profile_draft) {
+          updateProfileUI(data.profile_draft);
+        }
+
+        updateQuickResponses(currentStage);
+
+        // If completed, finalize automatically
+        if (currentStage === 'completed') {
+          setTimeout(() => {
+            finalizeVoiceProfile();
+          }, 1500);
+        }
+
+      } catch (err) {
+        console.error("Turn error:", err);
+      }
+    }
+
+    function updateQuickResponses(stage) {
+      const container = document.getElementById('quickResponsesContainer');
+      container.innerHTML = '';
+      const prompts = QUICK_PROMPTS[stage] || [];
+      prompts.forEach(p => {
+        const btn = document.createElement('button');
+        btn.className = "text-xs bg-slate-100 hover:bg-sky-50 hover:text-[#001f54] hover:border-sky-300 border border-slate-200 text-slate-700 px-3 py-1 rounded-full transition shadow-xs";
+        btn.innerText = p.label;
+        btn.onclick = () => sendUserUtterance(p.text);
+        container.appendChild(btn);
+      });
+    }
+
+    function appendMessage(speaker, text) {
+      const chat = document.getElementById('chatContainer');
+      const msgDiv = document.createElement('div');
+      
+      if (speaker === 'system') {
+        msgDiv.className = "flex items-start space-x-3";
+        msgDiv.innerHTML = `
+          <div class="bg-[#001f54] text-white p-2 rounded-xl flex items-center justify-center shadow-sm">
+            <i data-lucide="bot" class="w-4 h-4 text-sky-200"></i>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-2xl rounded-tl-none p-3.5 shadow-sm text-xs text-slate-800 max-w-[85%] leading-relaxed">
+            ${text}
+          </div>
+        `;
+      } else {
+        msgDiv.className = "flex items-start justify-end space-x-3";
+        msgDiv.innerHTML = `
+          <div class="bg-[#0077b6] text-white rounded-2xl rounded-tr-none p-3.5 shadow-sm text-xs max-w-[85%] leading-relaxed font-medium">
+            ${text}
+          </div>
+          <div class="bg-slate-800 text-white p-2 rounded-xl flex items-center justify-center shadow-sm">
+            <i data-lucide="user" class="w-4 h-4"></i>
+          </div>
+        `;
+      }
+      chat.appendChild(msgDiv);
+      chat.scrollTop = chat.scrollHeight;
+      lucide.createIcons();
+    }
+
+    function updateProfileUI(draft) {
+      if (!draft) return;
+      document.getElementById('cardName').innerText = draft.full_name || '-';
+      document.getElementById('cardDistrict').innerText = draft.district ? `${draft.district}, ${draft.state || 'Tamil Nadu'}` : '-';
+      document.getElementById('cardOccupation').innerText = draft.current_occupation || '-';
+      document.getElementById('cardEducation').innerText = draft.education_level || '-';
+      document.getElementById('cardSkills').innerText = (draft.existing_skills && draft.existing_skills.length) ? draft.existing_skills.join(', ') : '-';
+      document.getElementById('cardPreference').innerText = draft.employment_preference || '-';
+    }
+
+    // Text to Speech
+    function speakText(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.95;
+        if (currentLanguage === 'ta') utterance.lang = 'ta-IN';
+        else if (currentLanguage === 'hi') utterance.lang = 'hi-IN';
+        else utterance.lang = 'en-IN';
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // Speech Recognition
+    function initSpeechRecognition() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRecognition) {
+        recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = currentLanguage === 'ta' ? 'ta-IN' : (currentLanguage === 'hi' ? 'hi-IN' : 'en-IN');
+
+        recognition.onstart = () => {
+          isRecording = true;
+          document.getElementById('micBtn').classList.add('mic-active');
+        };
+
+        recognition.onresult = (event) => {
+          const transcript = event.results[0][0].transcript;
+          sendUserUtterance(transcript);
+        };
+
+        recognition.onend = () => {
+          isRecording = false;
+          document.getElementById('micBtn').classList.remove('mic-active');
+        };
+
+        recognition.onerror = (event) => {
+          console.error("Speech rec error:", event.error);
+          isRecording = false;
+          document.getElementById('micBtn').classList.remove('mic-active');
+        };
+      }
+    }
+
+    function toggleMic() {
+      if (!recognition) {
+        initSpeechRecognition();
+      }
+      if (recognition) {
+        if (isRecording) {
+          recognition.stop();
+        } else {
+          recognition.lang = currentLanguage === 'ta' ? 'ta-IN' : (currentLanguage === 'hi' ? 'hi-IN' : 'en-IN');
+          recognition.start();
+        }
+      } else {
+        alert("Web Speech recognition not supported in this browser. Please use text input or standard Chrome.");
+      }
+    }
+
+    async function requestHumanEscalation() {
+      sendUserUtterance("Help, please connect me to a human officer");
+    }
+
+    // Finalize Profile and compute recommendations
+    async function finalizeVoiceProfile() {
+      try {
+        const res = await fetch('/api/voice/finalize-profile', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ session_id: currentSessionId })
+        });
+        const data = await res.json();
+        activeProfile = data.profile;
+        renderRecommendations(data.recommendations);
+        switchTab('recommendations');
+        await fetchReferrals();
+        await fetchDashboardMetrics();
+      } catch (err) {
+        console.error("Error finalizing profile:", err);
+      }
+    }
+
+    // Render Recommendations
+    function renderRecommendations(recResponse) {
+      const container = document.getElementById('recommendationsGrid');
+      container.innerHTML = '';
+
+      if (!recResponse.recommendations || recResponse.recommendations.length === 0) {
+        container.innerHTML = `<div class="col-span-3 text-center p-8 bg-white rounded-xl text-slate-500">No pathways matched. Counselor intervention suggested.</div>`;
+        return;
+      }
+
+      recResponse.recommendations.forEach((item, idx) => {
+        const qual = item.qualification;
+        const opp = item.matching_opportunity;
+        const factorsHtml = item.factors.map(f => `
+          <div class="flex items-center justify-between text-[11px] py-1 border-b border-slate-100 last:border-0">
+            <span class="text-slate-600">${f.factor_name}:</span>
+            <span class="font-bold text-[#001f54]">+${f.score_contribution}%</span>
+          </div>
+        `).join('');
+
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-black px-2.5 py-1 rounded-full ${item.rank === 1 ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-slate-100 text-slate-700'}">
+                #${item.rank} Match: ${item.fit_percentage}% Fit
+              </span>
+              <span class="text-xs font-bold text-[#001f54] bg-sky-50 px-2.5 py-0.5 rounded border border-sky-100">NSQF Level ${qual.nsqf_level}</span>
+            </div>
+
+            <h3 class="font-bold text-slate-900 text-base mb-1">${qual.title}</h3>
+            <p class="text-xs text-slate-500 mb-3">${qual.job_role} • ${qual.sector}</p>
+
+            <div class="bg-sky-50/70 rounded-xl p-3 border border-sky-100 text-xs text-slate-800 mb-3">
+              <span class="font-bold text-[#001f54] block mb-1">Explainable AI Justification:</span>
+              <p class="text-[11px] text-slate-700 mb-1">${item.plain_language_explanation}</p>
+              <p class="text-[11px] text-[#001f54] font-medium italic">${item.regional_language_explanation}</p>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-3">
+              <span class="font-bold text-slate-700 text-xs block mb-1">Feature Contribution Breakdown:</span>
+              ${factorsHtml}
+            </div>
+
+            <div class="text-xs space-y-1 text-slate-600 mb-4">
+              <p><strong>Training Center:</strong> ${qual.center_name} (${qual.district})</p>
+              <p><strong>Duration:</strong> ${qual.duration_weeks} Weeks (${qual.duration_hours} hrs)</p>
+              <p><strong>Prerequisites:</strong> ${qual.prerequisites}</p>
+              <p><strong>Expected Income:</strong> <span class="text-[#001f54] font-bold">${qual.expected_income_range}</span></p>
+              ${opp ? `<p class="mt-2 text-[#034078] font-bold bg-sky-50 p-2 rounded-lg border border-sky-200">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 inline text-[#0077b6]"></i> Verified Vacancy: ${opp.title} (${opp.available_positions} seats)
+              </p>` : ''}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex items-center space-x-2">
+            <button onclick="openReferralModal('${qual.qualification_id}', '${qual.title.replace(/'/g, "\\'")}', '${qual.center_name.replace(/'/g, "\\'")}')" 
+                    class="w-full bg-[#001f54] hover:bg-[#034078] text-white text-xs font-bold py-2.5 px-3 rounded-xl shadow transition flex items-center justify-center gap-1.5">
+              <i data-lucide="user-plus" class="w-4 h-4"></i> Submit Referral to Hub
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    async function loadSampleBeneficiary(internalId) {
+      try {
+        const res = await fetch(`/api/recommendations/${internalId}`);
+        const data = await res.json();
+        
+        // Also fetch profile
+        const pRes = await fetch(`/api/profiles/${internalId}`);
+        activeProfile = await pRes.json();
+        updateProfileUI(activeProfile);
+
+        renderRecommendations(data);
+      } catch (err) {
+        console.error("Error loading sample:", err);
+      }
+    }
+
+    // Referral Modal & Submission
+    function openReferralModal(qualId, qualTitle, centerName) {
+      if (!activeProfile) {
+        alert("Please complete the voice interview or select an existing beneficiary first.");
+        return;
+      }
+      pendingReferralData = { qualId, qualTitle, centerName };
+      document.getElementById('modalBeneficiaryName').innerText = activeProfile.full_name;
+      document.getElementById('modalCourseTitle').innerText = qualTitle;
+      document.getElementById('modalCenterName').innerText = centerName;
+      document.getElementById('modalNotes').value = `Consented by beneficiary ${activeProfile.full_name} for enrollment in PM-AJAY cohort.`;
+      document.getElementById('referralModal').classList.remove('hidden');
+    }
+
+    function closeReferralModal() {
+      document.getElementById('referralModal').classList.add('hidden');
+    }
+
+    async function submitReferral() {
+      if (!pendingReferralData || !activeProfile) return;
+      const notes = document.getElementById('modalNotes').value;
+
+      try {
+        const res = await fetch('/api/referrals', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            beneficiary_id: activeProfile.internal_id,
+            qualification_id: pendingReferralData.qualId,
+            notes: notes
+          })
+        });
+        const data = await res.json();
+        closeReferralModal();
+        alert(`Referral created successfully! Referral ID: ${data.referral_id}`);
+        await fetchReferrals();
+        await fetchDashboardMetrics();
+        switchTab('case-referrals');
+      } catch (err) {
+        console.error("Referral creation error:", err);
+      }
+    }
+
+    // Fetch Referrals Table
+    async function fetchReferrals() {
+      try {
+        const res = await fetch('/api/referrals');
+        const referrals = await res.json();
+        const tbody = document.getElementById('referralsTableBody');
+        tbody.innerHTML = '';
+
+        referrals.forEach(r => {
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-slate-50 transition";
+          tr.innerHTML = `
+            <td class="p-3.5 font-mono font-bold text-[#001f54]">${r.referral_id}</td>
+            <td class="p-3.5">
+              <span class="font-bold text-slate-800 block">${r.beneficiary_name}</span>
+              <span class="text-slate-400 text-[11px]">${r.beneficiary_phone}</span>
+            </td>
+            <td class="p-3.5 font-medium text-slate-800">${r.chosen_pathway_title}</td>
+            <td class="p-3.5 text-slate-600">${r.target_center_or_employer}</td>
+            <td class="p-3.5 whitespace-nowrap font-semibold text-slate-700">${r.district}</td>
+            <td class="p-3.5 whitespace-nowrap">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-xs ${getStatusColor(r.status)}">
+                ${r.status}
+              </span>
+            </td>
+            <td class="p-3.5 whitespace-nowrap text-center">
+              <button onclick="openStatusModal('${r.referral_id}', '${r.status}')" class="text-xs bg-slate-100 hover:bg-slate-200 text-[#001f54] font-semibold px-3 py-1.5 rounded-lg border border-slate-200 transition shadow-2xs">
+                Update
+              </button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        console.error("Fetch referrals error:", err);
+      }
+    }
+
+    function getStatusColor(status) {
+      switch(status) {
+        case 'Referred': return 'bg-amber-100 text-amber-900 border border-amber-300';
+        case 'Contact Attempted': return 'bg-sky-100 text-[#001f54] border border-sky-300';
+        case 'Enrolled': return 'bg-blue-100 text-blue-900 border border-blue-300';
+        case 'In Training': return 'bg-indigo-100 text-indigo-900 border border-indigo-300';
+        case 'Completed': return 'bg-emerald-100 text-emerald-900 border border-emerald-300';
+        case 'Placed/Started Enterprise': return 'bg-emerald-200 text-emerald-950 font-black border border-emerald-400';
+        default: return 'bg-slate-100 text-slate-700';
+      }
+    }
+
+    function openStatusModal(refId, currentStatus) {
+      selectedReferralId = refId;
+      document.getElementById('modalStatusSelect').value = currentStatus;
+      document.getElementById('modalStatusNote').value = '';
+      document.getElementById('statusModal').classList.remove('hidden');
+    }
+
+    function closeStatusModal() {
+      document.getElementById('statusModal').classList.add('hidden');
+    }
+
+    async function submitStatusUpdate() {
+      if (!selectedReferralId) return;
+      const newStatus = document.getElementById('modalStatusSelect').value;
+      const note = document.getElementById('modalStatusNote').value;
+
+      try {
+        await fetch(`/api/referrals/${selectedReferralId}/status`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ new_status: newStatus, note: note })
+        });
+        closeStatusModal();
+        await fetchReferrals();
+        await fetchDashboardMetrics();
+      } catch (err) {
+        console.error("Status update error:", err);
+      }
+    }
+
+    // Fetch Catalog
+    async function fetchCatalog() {
+      try {
+        const res = await fetch('/api/catalog/qualifications');
+        const catalog = await res.json();
+        const container = document.getElementById('catalogGrid');
+        container.innerHTML = '';
+
+        catalog.forEach(q => {
+          const card = document.createElement('div');
+          card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3";
+          card.innerHTML = `
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded">${q.qualification_id}</span>
+              <span class="text-xs font-bold bg-sky-100 text-[#001f54] px-2.5 py-0.5 rounded-full border border-sky-200">NSQF L${q.nsqf_level}</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-sm">${q.title}</h3>
+            <p class="text-xs text-slate-500">${q.sector}</p>
+            <div class="text-xs space-y-1 text-slate-600 bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <p><strong>Provider:</strong> ${q.provider}</p>
+              <p><strong>Center:</strong> ${q.center_name} (${q.district})</p>
+              <p><strong>Duration:</strong> ${q.duration_weeks} Weeks (${q.duration_hours} hrs)</p>
+              <p><strong>Prerequisites:</strong> ${q.prerequisites}</p>
+              <p><strong>PM-AJAY GIA:</strong> 100% Free with Daily Stipend Support</p>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (err) {
+        console.error("Fetch catalog error:", err);
+      }
+    }
+
+    // Fetch M&E Dashboard
+    async function fetchDashboardMetrics() {
+      try {
+        const res = await fetch('/api/analytics/dashboard');
+        const data = await res.json();
+        const s = data.summary;
+
+        document.getElementById('statTotalProfiles').innerText = s.total_beneficiaries_profiled;
+        document.getElementById('statTotalReferrals').innerText = s.total_referrals_generated;
+        document.getElementById('statEnrolled').innerText = s.enrolled_in_training;
+        document.getElementById('statEscalations').innerText = s.human_escalation_queue_size;
+
+        // Render Funnel
+        const fContainer = document.getElementById('funnelContainer');
+        fContainer.innerHTML = '';
+        const funnelOrder = ['Referred', 'Contact Attempted', 'Enrolled', 'In Training', 'Completed', 'Placed/Started Enterprise'];
+        funnelOrder.forEach(stage => {
+          const count = data.referral_funnel[stage] || 0;
+          const pct = s.total_referrals_generated ? Math.round((count / s.total_referrals_generated) * 100) : 0;
+          fContainer.innerHTML += `
+            <div>
+              <div class="flex justify-between font-semibold mb-1 text-slate-700">
+                <span>${stage}</span>
+                <span class="font-bold text-[#001f54]">${count} (${pct}%)</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-2">
+                <div class="bg-[#001f54] h-2 rounded-full" style="width: ${Math.max(pct, 5)}%"></div>
+              </div>
+            </div>
+          `;
+        });
+
+        // Render District Distribution
+        const dContainer = document.getElementById('districtDistributionContainer');
+        dContainer.innerHTML = '';
+        for (const [dist, count] of Object.entries(data.district_distribution)) {
+          dContainer.innerHTML += `
+            <div class="flex justify-between items-center p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <span class="font-bold text-slate-800">${dist}</span>
+              <span class="bg-sky-100 text-[#001f54] font-bold px-2.5 py-0.5 rounded-full border border-sky-200">${count} Beneficiaries</span>
+            </div>
+          `;
+        }
+
+        // Render Audit Logs
+        const aTable = document.getElementById('auditLogsTableBody');
+        aTable.innerHTML = '';
+        (data.audit_logs_sample || []).reverse().forEach(log => {
+          aTable.innerHTML += `
+            <tr>
+              <td class="p-2 font-mono text-slate-400 text-[10px]">${log.timestamp.slice(11, 19)}</td>
+              <td class="p-2 font-bold text-slate-700">${log.actor}</td>
+              <td class="p-2"><span class="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-[10px] text-[#001f54] font-semibold">${log.action}</span></td>
+              <td class="p-2 text-slate-600">${log.entity}</td>
+              <td class="p-2 text-slate-500">${log.details}</td>
+            </tr>
+          `;
+        });
+
+      } catch (err) {
+        console.error("Dashboard metrics error:", err);
+      }
+    }
+  </script>
+</body>
+</html>
