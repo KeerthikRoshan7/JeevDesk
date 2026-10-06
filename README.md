@@ -30,10 +30,10 @@
 ┌────────────────────────────────────────────────────────────────────────┐
 │                   JEEVDESK FastAPI Backend Service                     │
 │                                                                        │
-│ • Voice Dialogue Manager (Repair, Silence, Repetition & Escalation)   │
+│ • Voice Dialogue Manager (Repair, Silence, Repetition & Escalation)    │
 │ • Structured Profile Extractor (Provenance & Confidence Tracking)      │
-│ • Explainable NSQF Recommendation Engine (Multi-criteria Scoring)     │
-│ • Case Referral & Post-Skilling Lifecycle Workflow                    │
+│ • Explainable NSQF Recommendation Engine (Multi-criteria Scoring)      │
+│ • Case Referral & Post-Skilling Lifecycle Workflow                     │
 │ • Audit Logging & Data Minimization Governance Engine                  │
 └────────────────────────────────┬───────────────────────────────────────┘
                                  │
