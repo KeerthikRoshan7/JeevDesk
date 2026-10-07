@@ -7,15 +7,18 @@
 **A multilingual, voice-first livelihood assistant for accessible profiling, NSQF-aligned skilling, and locally relevant opportunity recommendations.**
 
 <p>
-<img src="https://img.shields.io/badge/Smart%20India%20Hackathon-2026-10257B?style=for-the-badge" alt="Smart India Hackathon 2026" />
+  <img src="https://img.shields.io/badge/Smart%20India%20Hackathon-2026-10257B?style=for-the-badge" alt="Smart India Hackathon 2026" />
   <img src="https://img.shields.io/badge/Problem%20Statement-26097-F0A526?style=for-the-badge" alt="Problem Statement 26097" />
   <img src="https://img.shields.io/badge/Category-Software-1E9B50?style=for-the-badge" alt="Software category" />
   <img src="https://img.shields.io/badge/Theme-Agriculture%20%7C%20FoodTech%20%7C%20Rural%20Development-10257B?style=for-the-badge" alt="Theme" />
-</p> <p>
-  <strong>PM-AJAY Grant-in-Aid</strong> · Ministry of Social Justice &amp; Empowerment  
+</p>
 
+<p>
+  <strong>PM-AJAY Grant-in-Aid</strong> · Ministry of Social Justice &amp; Empowerment<br />
   <em>Voice-first, human-supported, explainable livelihood discovery</em>
-</p> </div>
+</p>
+
+</div>
 
 ---
 
@@ -23,42 +26,15 @@
 
 <div align="center">
 
-<pre align="center">
+<p align="center">
+  <img src="./assets/jeevdesk_logo_transparent.png" alt="JEEVDESK AI-driven livelihood and skilling logo" width="400" />
+</p>
 
-
-                                           ╓▄
-                                        ,▄▓▓▓▓▓p
-                                      ╓▓▓▓▓▓▓▓▓▓▓▄
-                                    ╓▓▓▓▓▓▓▓▓▓▓▓▓▓▓p
-                                   ▄▓▓▓▓▓▌⌠╥╥⌠▀▓▓▓▓▓▌
-                                 ╓▓▓▓▓▓▓▓⌐╬╫╫╫ ▓▓▓▓▓▓▓▄
-                                ╓▓▓▓▀▓▓▓▓▓▄⌠,▄▓▓▓▓▓▀▓▓▓▄
-                               ╓▓▓M╦ÑN╙▓▓▓▓▌▐▓▓▓▓▀éÑN`▓▓▄
-                              ,▓▓▓▄╨╨╨,▀▓▓▓▌▐▓▓▓▀½J╨╨▄▓▓▓p
-              ▄▄▄╓╓,          ╢▓▓▓▓▓▓▓▓▓▄╙▓▌▐▓▀▄▓▓▓▓▓▓▓▓▓▓          ,╓╓▄▄▄
-              ▓▓▓▓▓▓▓▓▓▄▄,    ▓▓▓▌╥╦╥▀▓▓▓▓▄┘"╓▓▓▓▓▌╓╦╥▀▓▓▓    ,╓▄▓▓▓▓▓▓▓▓▓H
-              ▓▓▓▓▓▀▀▓▓▓▓▓▓▄µ ╙▓▓▌▄╨╓▄▀▀▓▓▓p.▓▓▓▓▀▄▄╨Ü▓▓▓▌ ,▄▓▓▓▓▓▓▓▀▓▓▓▓▓H
-              ▓▓▓▓▌]▓▓▄▄▄▄▀▀▓▓▄╙▓▓▓▓▓▓▓▓▄▀▓▌▐▓▌▐▄▓▓▓▓▓▓▓▀▄▓▓▀▀║▄▄▄Φ▓M▐▓▓▓▓
-               ▓▓▓▓w▀▓▓▓▓▓▓▓▄▄▀▓▄▀▓▓▓▓▓▓▓▌╙▌▐▀▄▓▓▓▓▓▓▓▀╓▓▀╠▄▓▓▓▓▓▓▓▌,▓▓▓▓┘
-                ▓▓▓▓p▀▓▓▓▓▓▀▀▓▓▄▀▌ ▀▓▓▓▓▀└,╓╥,`▀▓▓▓▓▀ ▄▀▄▓▓▀▀▓▓▓▓▓▀╓▓▓▓▓┘
-                 ╙▓▓▓▌▄▀▓▓▓▓▓▓▄Ö▀W▀µ ▀▓M.╬╫╫╫╫╫╕"▓▌ ,▀▄▀╠▄Φ▓▓▓▓▓▀╓▄▓▓▓▀
-                   `▀▀▓▓▄▄▀▀▀▓▓▓▓▄p╙W ╙⌐╙╫╫╫╫╫╫H ▀ x╨╓▄▓▓▓▓▀▀▀▄▄▓▓▓▀└
-                        ,╥╥╥╥╥╥╓╓J╙╙%,   `╙╩╩╩`   ,═╜╙⌠╓╓╓╥╥╥╥╥;
-                   «╦Ñ╫╫╫╫╫╫╫╫╫╫╫╫╫╫Ñ╦╥          ╓╦D╫╫╫╫╫╫╫╫╫╫╫╫╫╫ÑN«
-                     `"╩╨",╓╓╦╦╦N╦╦╦╥╠╨ÑN⌂.   ,╦Ñ╩╠╓╦╦╦╦╦╦╦╥╓,`╙╨╙`
-                          `╙╩╫╫╫╫╫╫ÑÑÑÑÑN╠N⌂:#Ö╦Ñ╫ÑÑÑ╫╫╫╫╫╫Ñ╨`
-                                         `"Ö9*`
-            ,,  ,,,,,,,, ,,,,,,, ,,,     ,,, ,,,,,     ,,,,,,,   ,,,,   ,,,  ,,,
-            ▓▓▌ ║▓▓▀▀▀▀▀ ║▓▓▀▀▀▀M ▓▓▓   ▓▓▓  ▓▓▓▀▓▓▓▄  ╫▓▓▀▀▀▀⌐,▓▓▌▀▓▓╛ ╫▓▓,▄▓▓╨
-            ▓▓▌ ║▓▓▄▄▄▄  ║▓▓▄▄▄▄   ▓▓▌ ▄▓▓`  ▓▓▌  ╙▓▓▌ ╫▓▓▄▄▄φ ╙▓▓▓▄▄p  ╫▓▓▓▓╨
-        ,p ╓▓▓M ║▓▓╙╙╙╙  ║▓▓╙╙╙╙    ▓▓▓▓▓┘   ▓▓▌  ▄▓▓▌ ╫▓▓╙╙╙└  ╓╙╙▀▓▓▓ ╫▓▓▓▓▌
-        ▀▓▓▓▓▀  ║▓▓▓▓▓▓▓ ║▓▓▓▓▓▓▓   "▓▓▓┘    ▓▓▓▓▓▓▀╨  ╫▓▓▓▓▓▓⌐ª▓▓▓▓▓▓╨ ╫▓▓ ▀▓▓▄
-
-           .▓ Φ  ║║ ▓⌐╫ ▄`╫∩║╣  ║,║ Φ╛║╕▐,▐ ▌▌jÖHΦ║ ▌N  ▓≥  ▓ ╫Ü▐ ▌ ▌ ▌║Φ⌐╣▌
-
-
+**Brand language:** the navy lotus represents trust and technology; the white connected nodes represent AI-assisted discovery; the green leaves represent growth and inclusion; the saffron pathways represent opportunity, livelihood, and progress.
 
 </div>
+
+> **Logo:** The transparent logo is included at `assets/jeevdesk_logo_transparent.png`.
 
 ---
 
@@ -66,12 +42,10 @@
 
 **JEEVDESK** is an empathetic, multilingual voice assistant designed to help beneficiaries discover realistic livelihood and skilling pathways without relying on literacy-heavy digital forms.
 
-The system is designed for Scheduled Caste (SC ) beneficiaries supported through the **Grant-in-Aid component of Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM-AJAY)**. It addresses three connected gaps:
+The system is designed for Scheduled Caste (SC) beneficiaries supported through the **Grant-in-Aid component of Pradhan Mantri Anusuchit Jaati Abhyuday Yojana (PM-AJAY)**. It addresses three connected gaps:
 
 - **Access gap:** beneficiaries may have low digital literacy, limited connectivity, or language barriers.
-
 - **Matching gap:** aspirations, existing skills, training catalogs, mobility constraints, and local demand are often disconnected.
-
 - **Coordination gap:** field teams, training providers, implementing agencies, and administrators need a common case and referral workflow.
 
 JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a structured consented profile, and produces explainable recommendations aligned with approved NSQF/course data and locally verified opportunities.
@@ -85,7 +59,7 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
 ## 2. Core Principles
 
 | Principle | How JEEVDESK applies it |
-| --- | --- |
+|---|---|
 | **Voice first, not voice only** | Beneficiaries can use voice while field staff can review and correct structured data. |
 | **Respect and agency** | The assistant explains why information is requested, supports correction, and allows pause or exit. |
 | **Local relevance** | Recommendations consider language, geography, travel feasibility, schedule, seasonality, and local opportunity data. |
@@ -98,7 +72,7 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
 
 ## 3. System Architecture
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                              JEEVDESK SYSTEM                                 │
 └──────────────────────────────────────────────────────────────────────────────┘
@@ -106,9 +80,9 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
                  ┌────────────────────┴────────────────────┐
                  ▼                                         ▼
 ┌─────────────────────────────────┐       ┌─────────────────────────────────────┐
-│ Beneficiary & Assisted Voice    │       │ Field Facilitator & M&E Web Portal  │
-│ Client                          │       │ Responsive HTML5 interface          │
-│ Tamil · Hindi · English         │       │ Review · referral · monitoring      │
+│ Beneficiary & Assisted Voice    │       │ Field Facilitator & M&E Web Portal │
+│ Client                           │       │ Responsive HTML5 interface         │
+│ Tamil · Hindi · English          │       │ Review · referral · monitoring      │
 └───────────────┬─────────────────┘       └──────────────────┬──────────────────┘
                 │                                            │
                 └────────────────────┬───────────────────────┘
@@ -118,17 +92,17 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                         FASTAPI BACKEND SERVICE                              │
 │                                                                              │
-│  Voice Dialogue Manager                                                      │
-│  • language selection · silence handling · repeat · repair · escalation      │
+│  Voice Dialogue Manager                                                     │
+│  • language selection · silence handling · repeat · repair · escalation     │
 │                                                                              │
-│  Structured Profile Extractor                                                │
+│  Structured Profile Extractor                                               │
 │  • consent · provenance · confidence · correction history                    │
 │                                                                              │
-│  Explainable NSQF Recommendation Engine                                      │
-│  • constraints · multi-criteria scoring · alternatives · explanations        │
+│  Explainable NSQF Recommendation Engine                                     │
+│  • constraints · multi-criteria scoring · alternatives · explanations       │
 │                                                                              │
-│  Case Referral & Post-Skilling Workflow                                      │
-│  • referred → contacted → enrolled → training → completed → outcome          │
+│  Case Referral & Post-Skilling Workflow                                     │
+│  • referred → contacted → enrolled → training → completed → outcome         │
 │                                                                              │
 │  Governance Layer                                                            │
 │  • RBAC · audit logging · data minimization · advisory safeguards            │
@@ -137,9 +111,9 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
                     ┌───────────────────┴───────────────────┐
                     ▼                                       ▼
 ┌───────────────────────────────┐       ┌────────────────────────────────────┐
-│ Curated NSQF Catalog          │       │ Local Opportunity Store            │
-│ Agriculture · FoodTech        │       │ FPOs · cluster grants · MSMEs      │
-│ Apparel · Solar · Automotive  │       │ verified jobs · enterprise support │
+│ Curated NSQF Catalog           │       │ Local Opportunity Store            │
+│ Agriculture · FoodTech         │       │ FPOs · cluster grants · MSMEs      │
+│ Apparel · Solar · Automotive   │       │ verified jobs · enterprise support │
 └───────────────────────────────┘       └────────────────────────────────────┘
 ```
 
@@ -148,7 +122,7 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
 ## 4. Implemented Technology Stack
 
 | Layer | Technology / approach |
-| --- | --- |
+|---|---|
 | **Frontend** | Responsive HTML5, browser voice interaction, assisted field workflow |
 | **Backend** | Python, FastAPI, Pydantic schemas |
 | **Conversation** | Multilingual dialogue manager with repair, silence, repetition, and human escalation paths |
@@ -163,7 +137,7 @@ JEEVDESK supports interactions in **Tamil, Hindi, and English**, creates a struc
 The current matching model uses a transparent five-factor score:
 
 | Factor | Weight |
-| --- | --- |
+|---|---:|
 | Affinity to aspiration and existing skills | **35%** |
 | Pathway completeness and progression potential | **20%** |
 | Geographic feasibility | **20%** |
@@ -177,7 +151,7 @@ The score is advisory. It does **not** determine program eligibility, approve gr
 ## 5. Feature Map
 
 | Product area | Capability | Current implementation |
-| --- | --- | --- |
+|---|---|---|
 | **FR-01 to FR-08** | Voice & conversation | Turn-by-turn dialogue, language selection, repeat/repair phrases, human-officer escalation, structured extraction |
 | **FR-09 to FR-14** | Profile & case management | Consented beneficiary profile, correction history, audit logging, mobile/kiosk-assisted mode |
 | **FR-15 to FR-23** | Catalog & matching | NSQF Level 3–4 pathways, five-factor scoring, constraint-aware ranking, bilingual explanations |
@@ -186,7 +160,7 @@ The score is advisory. It does **not** determine program eligibility, approve gr
 
 ### Referral lifecycle
 
-```
+```text
 New
   ↓
 Under Review
@@ -210,7 +184,7 @@ Alternative states include **declined**, **unavailable**, **needs correction**, 
 
 ## 6. Repository Layout
 
-```
+```text
 jeevdesk/
 ├── backend/
 │   └── app/
@@ -235,10 +209,11 @@ jeevdesk/
 │   └── index.py                     # Deployment/API adapter
 │
 ├── assets/
-│   └── jeevdesk_transparent_logo.png # README brand asset
+│   └── jeevdesk_logo_transparent.png  # Transparent README logo
 │
+├── requirements.txt                 # Python dependencies
+├── vercel.json                      # Deployment configuration
 ├── run_server.py                    # Local server launcher
-└── README.md                        # Project documentation
 └── README.md                        # Project documentation
 ```
 
@@ -249,18 +224,15 @@ jeevdesk/
 ### Prerequisites
 
 - Python **3.10+**
-
 - A modern browser with microphone permission support
-
 - Git
-
 - Optional: a virtual environment for dependency isolation
 
 ### Installation
 
 ```bash
-git clone <your-repository-url>
-cd jeevdesk
+git clone https://github.com/KeerthikRoshan7/JeevDesk.git
+cd JeevDesk
 
 python -m venv .venv
 
@@ -281,11 +253,9 @@ python run_server.py
 
 Open the application at:
 
-```
+```text
 http://127.0.0.1:8000
 ```
-
-> If the repository uses a different dependency or startup file, update the commands above to match the checked-in project files.
 
 ---
 
@@ -294,43 +264,30 @@ http://127.0.0.1:8000
 ### 🎙️ Beneficiary Voice Mode
 
 - Select Tamil, Hindi, or English.
-
 - Start the guided interview.
-
 - Use repeat or correction prompts when needed.
-
 - Confirm critical profile fields before continuing.
-
 - Request human assistance whenever the pathway requires review.
 
 ### 🧭 Recommendations Tab
 
 - Inspect ranked NSQF-aligned pathways.
-
 - Review the feature contribution breakdown.
-
 - Check geography, education, schedule, and market-fit conditions.
-
 - Compare alternatives instead of treating the top result as a guarantee.
 
 ### 📋 Case Management Tab
 
 - Track referrals across training hubs and enterprise clusters.
-
 - Assign owners and follow-up actions.
-
 - Update lifecycle states from referral through completion or outcome.
-
 - Record unsuitable, inaccessible, unavailable, or unsupported recommendations.
 
 ### 📊 M&E Analytics Tab
 
 - View conversion funnels.
-
 - Review district distributions.
-
 - Monitor profile quality and recognition-repair rates.
-
 - Inspect compliance and audit logs.
 
 ---
@@ -342,33 +299,21 @@ JEEVDESK is designed as a **human-in-the-loop advisory system**.
 ### It must not
 
 - independently determine PM-AJAY eligibility;
-
 - approve grants or disburse funds;
-
 - certify a beneficiary’s skill;
-
 - guarantee employment or placement;
-
 - automatically enroll or reject a beneficiary;
-
 - infer unnecessary sensitive attributes;
-
 - share personal details with third parties without approved authority and consent.
 
 ### Required safeguards
 
 - Consent before creating a persistent beneficiary profile.
-
 - Confidence and provenance tracking for extracted fields.
-
 - Human review for uncertain, contradictory, unsafe, or unsupported cases.
-
 - Versioned catalogs and recommendation policies.
-
 - Role-based access and audit logging.
-
 - Configurable retention and controlled exports.
-
 - Clear advisory wording in every recommendation flow.
 
 ---
@@ -376,23 +321,14 @@ JEEVDESK is designed as a **human-in-the-loop advisory system**.
 ## 10. Roadmap
 
 - [x] Multilingual profile and recommendation concept
-
 - [x] Explainable multi-criteria matching
-
 - [x] Referral and post-skilling lifecycle model
-
 - [x] Field facilitator and M&E workflow concept
-
 - [ ] Pilot-grade IVR integration
-
 - [ ] Offline-first assisted PWA mode
-
 - [ ] Catalog synchronization with approved authorities
-
 - [ ] Provider, apprenticeship, and employer integrations
-
 - [ ] Expanded dialect coverage and field speech evaluation
-
 - [ ] Voice-based follow-up surveys
 
 ---
@@ -402,21 +338,13 @@ JEEVDESK is designed as a **human-in-the-loop advisory system**.
 The pilot should track both service performance and outcome quality:
 
 - Session reach and completion rate
-
 - Confirmed profile completeness
-
 - Speech-recognition repair and correction rate
-
 - Recommendation acceptance and alternative selection
-
 - Referral conversion and enrollment rate
-
 - Training/activity completion rate
-
 - Verified wage employment, apprenticeship, or self-employment progression
-
 - Beneficiary and staff satisfaction
-
 - Equity by language, geography, age band, gender where lawfully collected, accessibility need where voluntarily disclosed, and device/channel
 
 ---
@@ -424,11 +352,8 @@ The pilot should track both service performance and outcome quality:
 ## 12. Reference Links
 
 - [PM-AJAY — Ministry of Social Justice & Empowerment](https://socialjustice.gov.in/schemes/104)
-
 - [National Skills Qualification Framework — NCVET](https://ncvet.gov.in/national-skills-qualification-framework/)
-
 - [Skill India Digital Hub — About Us](https://www.skillindiadigital.gov.in/about-us)
-
 - [BHASHINI — Official Products](https://bhashini.gov.in/product)
 
 ---
@@ -438,7 +363,7 @@ The pilot should track both service performance and outcome quality:
 <div align="center">
 
 | Field | Value |
-| --- | --- |
+|---|---|
 | **Project** | JEEVDESK |
 | **Problem Statement ID** | 26097 |
 | **Owning Organization** | Ministry of Social Justice & Empowerment |
