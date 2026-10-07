@@ -22,22 +22,6 @@
 
 ---
 
-## ✦ Logo Mark
-
-<div align="center">
-
-<p align="center">
-  <img src="./assets/jeevdesk_logo_transparent.png" alt="JEEVDESK AI-driven livelihood and skilling logo" width="400" />
-</p>
-
-**Brand language:** the navy lotus represents trust and technology; the white connected nodes represent AI-assisted discovery; the green leaves represent growth and inclusion; the saffron pathways represent opportunity, livelihood, and progress.
-
-</div>
-
-> **Logo:** The transparent logo is included at `assets/jeevdesk_logo_transparent.png`.
-
----
-
 ## 1. What is JEEVDESK?
 
 **JEEVDESK** is an empathetic, multilingual voice assistant designed to help beneficiaries discover realistic livelihood and skilling pathways without relying on literacy-heavy digital forms.
